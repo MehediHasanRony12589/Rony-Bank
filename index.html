@@ -9,11 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <div id="login-area">
-    <h1 class="text-center">
+    <div id="login-area"><div class="row"><div class="col-12">
+    <h2 class="text-center">
         
-        Well-come to Rony-Bank
-    </h1>
+        Wellcome to Rony-Bank
+    </h2></div></div>
     <div class="submit-area">
     <h2>Login</h2>
     <input type="email" name="" id="" class="form-control" placeholder="Enter your Email Here"><br>
@@ -21,30 +21,30 @@
     <button class="btn btn-success" id="login">Enter</button></div></div>
     <div id="transection-area">
         <div class="row">
-            <div class="col-md-4 "><div class="resposive diposit">
-                <h5>Deposit</h5>
-                <h2>$<span id="currentDiposit">00</span></h2></div>
+            <div class="col-md-4 col-6"><div class="resposive diposit ">
+                <h5 class="col-12">Deposit</h5>
+                <h2 class="col-12">$<span id="currentDiposit">00</span></h2></div>
             </div>
-            <div class="col-md-4 ">
-                <div class="resposive withdraw">
+            <div class="col-md-4 col-6">
+                <div class="resposive withdraw ">
                 <h5>Withdraw</h5>
                 <h2>$<span id="currentWithdraw">00</span></h2>
             </div>
             </div>
-            <div class="col-md-4 ">
-                <div class="resposive balance">                <h5>Balance</h5>
+            <div class="col-md-4 col-12">
+                <div class="resposive balance ">                <h5>Balance</h5>
                 <h2>$<span id="currentBalance">1200</span></h2>
             </div>
 
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6"><div class="submit-area length">
+            <div class="col-md-6 "><div class="submit-area length">
                 <h4>Deposit</h4>
                 <input type="number" class="form-control" placeholder=" $ amount you want to Deposit" id="dipositAmount"><br>
                 <button class="btn btn-success" id="diposit">Deposit</button>
             </div></div>
-            <div class="col-md-6"><div class="submit-area length">
+            <div class="col-md-6 "><div class="submit-area length">
                 <h4>Withdraw</h4>
                 <input type="number" class="form-control" placeholder="$ amount you want to withdraw" id="withdrawAmount"><br>
                 <button class="btn btn-success" id="withdraw">Withdraw</button></div></div>
@@ -100,8 +100,10 @@ withdrawbtn.addEventListener('click',function(){
   document.getElementById('currentWithdraw').innerText=totalWithdraw
 //withdraw out off total balance //
 
-
-
+const currentBalance=document.getElementById('currentBalance').innerText
+const currentBalanceNumber =parseFloat(currentBalance);
+const totalBalance=currentBalanceNumber-withdrawNumber;
+document.getElementById('currentBalance').innerText=totalBalance
 
 
 

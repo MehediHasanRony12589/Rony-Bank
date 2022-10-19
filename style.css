@@ -7,8 +7,10 @@ box-shadow: 20px 20px 50px gray;}
 .diposit{background-color: slateblue;;}
 .withdraw{background-color: lightsalmon;}
 .balance{background-color:orange;}
-.resposive{padding: 10px 20px;height: 100px;color: white;border-radius: 10px;margin-bottom: 100px;
+.resposive{padding: 10px 20px;height: 100px;color: white;border-radius: 10px;margin-bottom: 10px;
 
 
 }
-
+.text-center{
+    color: aqua;border: 2px solid rgb(243, 179, 19);background-color: rgb(49, 10, 10);border-radius: 10px;
+}
